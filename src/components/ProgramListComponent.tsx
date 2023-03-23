@@ -35,6 +35,7 @@ const ProgramListComponent = ({ className, items, onSelect }: Prop) => {
         loadingImage,
         width: 150,
         height: 200,
+        alt: program.title,
       };
     }
 

@@ -23,7 +23,7 @@ const Modal = ({ children, onCloseClick = () => {} }: Prop) => {
             style={{ backgroundImage: `url(${closeIcon}` }}
           />
         </div>
-        <div className="overflow-scroll">{children}</div>
+        <div className="h-full overflow-scroll">{children}</div>
       </div>
     </div>
   );

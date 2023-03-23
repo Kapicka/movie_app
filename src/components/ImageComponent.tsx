@@ -54,6 +54,7 @@ const ImageComponent = ({
   return (
     <div className={`relative bg-gray-200`}>
       <img
+        alt={image.alt || "movie_image"}
         className={`absolute h-full w-full opacity-0 transition-opacity duration-500 ${
           showFullImage && "relative opacity-100"
         }`}
@@ -66,6 +67,7 @@ const ImageComponent = ({
 
       {!showFullImage && (
         <img
+          alt={image.alt || "movie_image"}
           onError={handleLoadingImageFetchFailed}
           className={`${className} } blur-sm`}
           width={`${loadingImage.width}px`}

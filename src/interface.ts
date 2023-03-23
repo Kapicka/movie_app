@@ -25,6 +25,7 @@ export interface IImage {
   height?: number;
   srcset?: string;
   sizes?: string;
+  alt?: string;
   //placeholder for full size image
   loadingImage?: string;
 }

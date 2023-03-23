@@ -21,6 +21,7 @@ const ProgramDetailModal = ({ onClose, program }: Prop) => {
     const sizes = [320, 480, 768, 1024, 1440];
     return {
       url: mainImage.url,
+      alt: program.title,
       srcset: getSrcSet(mainImage.url, sizes),
       loadingImage: getResizedImage(
         mainImage.url,
