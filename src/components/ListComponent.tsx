@@ -24,7 +24,7 @@ const ListComponent = ({
       <div className="px-10] flex w-full items-center justify-center">
         <div className="mt-4 grid w-full w-full max-w-[900px] grid-cols-2 gap-4 px-4 text-start text-lg sm:grid-cols-4 md:grid-cols-5 ">
           {items.map((item) => (
-            <div>
+            <div key={`item_${item.id}`}>
               <ListItem
                 className="h-full w-full"
                 onClick={() => onItemClick(item.id)}

@@ -36,7 +36,10 @@ const Footer = ({ className = "" }: Prop) => {
       <div className="w-full max-w-[900px] ">
         <ul className="mb-4 w-full justify-start md:flex">
           {links.map((link, i) => (
-            <li className="md:border-r-1 flex items-center px-1 md:border-gray-400 md:last:border-0">
+            <li
+              key={`footer-link_${i}`}
+              className="md:border-r-1 flex items-center px-1 md:border-gray-400 md:last:border-0"
+            >
               <NavLink to={link.href} className="hover:text-white">
                 {link.label}
               </NavLink>
@@ -51,8 +54,11 @@ const Footer = ({ className = "" }: Prop) => {
         </p>
         <div className="md:flex md:items-center md:justify-between">
           <ul className="mb-10 flex w-full gap-4">
-            {socialMediaLinks.map((link) => (
-              <li className=" h-[40px] w-[40x] cursor-pointer bg-contain bg-center">
+            {socialMediaLinks.map((link, i) => (
+              <li
+                key={`socials-link${i}`}
+                className=" h-[40px] w-[40x] cursor-pointer bg-contain bg-center"
+              >
                 <a href={link.href}>
                   <img className="h-full w-full" src={link.image} />
                 </a>
@@ -60,8 +66,8 @@ const Footer = ({ className = "" }: Prop) => {
             ))}
           </ul>
           <ul className="sm:flex sm:items-center sm:gap-4 ">
-            {appMarkets.map((market) => (
-              <li className="mb-4 sm:mb-0">
+            {appMarkets.map((market, i) => (
+              <li key={`market${i}`} className="mb-4 sm:mb-0">
                 <a
                   href={market.href}
                   style={{ backgroundImage: `url(${market.image}` }}
