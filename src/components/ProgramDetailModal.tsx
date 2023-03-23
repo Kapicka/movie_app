@@ -6,11 +6,10 @@ import ImageComponent from "./ImageComponent";
 import useFetch from "../useFetch";
 
 type Prop = {
-  className?: string;
   program: IProgram;
   onClose?: () => void;
 };
-const ProgramDetailModal = ({ className = "", onClose, program }: Prop) => {
+const ProgramDetailModal = ({ onClose, program }: Prop) => {
   const images = Object.values(program.images);
   const mainImage = images[0];
   const [hasImage, setHasImage] = useState<boolean>(!!mainImage);
