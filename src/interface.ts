@@ -1,5 +1,3 @@
-import ProgramTypeEnum from "./enum/ProgramTypeEnum";
-
 export interface IListItem {
   id: number;
   title: string;

@@ -6,7 +6,7 @@ type Prop = {
   children?: React.ReactNode;
   onCloseClick?: () => void;
 };
-const Modal = ({ className = "", children, onCloseClick = () => {} }: Prop) => {
+const Modal = ({ children, onCloseClick = () => {} }: Prop) => {
   return (
     <div
       onClick={onCloseClick}
