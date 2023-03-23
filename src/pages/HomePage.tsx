@@ -2,10 +2,7 @@ import React from "react";
 import ListComponent from "../components/ListComponent";
 import { useNavigate } from "react-router-dom";
 
-type Prop = {
-  className?: string;
-};
-const HomePage = ({ className = "" }: Prop) => {
+const HomePage = () => {
   const navigate = useNavigate();
 
   const handleItemClicked = (itemId: number) => {
